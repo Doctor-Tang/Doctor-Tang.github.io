@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <meta name="keywords" content="hexo, autumn" />
+    <title>
+        大唐小沙弥的博客
+    </title>
+    <!-- favicon -->
+    
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/frontendsophie/hexo-theme-autumn@1.0.0/source/img/favicon.ico" />
+     
+<link rel="stylesheet" href="/css/style.css">
+
+
+    <!-- highlight -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/github-gist.min.css" />
+    <script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad()
+    </script>
+    <script src="https://cdn.jsdelivr.net/gh/frontendsophie/hexo-infinite-scroll@2.0.0/dist/main.js"></script>
+
+    <script>
+        infiniteScroll()
+
+        window.addEventListener('DOMContentLoaded', function () {
+            const [
+                mainTitle,
+                mobileMenu,
+                mobileMainTitle,
+                mobileMenuBtn,
+                ipadMenuBtn,
+                aside,
+                closeBtn,
+            ] = getEle(
+                '#main-title',
+                '.mobile-menu',
+                '.mobile-menu h3',
+                '.mobile-menu button',
+                '.ipad-menu',
+                'aside',
+                'aside .close',
+            )
+            const io = new IntersectionObserver(entries => {
+                if (entries[0].intersectionRatio <= 0) {
+                    mobileMainTitle.classList.remove('invisibile')
+                } else {
+                    mobileMainTitle.classList.add('invisibile')
+                }
+            })
+            io.observe(mainTitle)
+
+            clickToggleAside(mobileMenuBtn)
+            clickToggleAside(ipadMenuBtn)
+            clickToggleAside(closeBtn, false)
+
+            const isMenuVisible = window.getComputedStyle(mobileMenu).display !== 'none'
+            if (isMenuVisible) document.body.style.background = 'none'
+
+            function getEle(...args) {
+                return args.map(arg => document.querySelector(arg))
+            }
+
+            function clickToggleAside(btn, show = true) {
+                btn.addEventListener('click', function () {
+                    if (show) {
+                        aside.style.display = 'block'
+                    } else {
+                        aside.style.display = 'none'
+                    }
+                })
+            }
+        })
+    </script>
+<meta name="generator" content="Hexo 7.1.1"></head>
+
+<body style="background: url(https://cdn.jsdelivr.net/gh/frontendsophie/hexo-theme-autumn@1.0.0/source/img/button-bg.png) #f3f3f3">
+    <div class="container">
+        <header class="header">
+    <nav class="mobile-menu" style="background: url(https://cdn.jsdelivr.net/gh/frontendsophie/hexo-theme-autumn@1.0.0/source/img/button-bg.png) #f3f3f3">
+        <h3 class="invisibile">
+            <a href="/" class="logo">
+                大唐小沙弥的博客
+            </a>
+        </h3>
+        <button class="menu">menu</button>
+    </nav>
+
+    <button class="ipad-menu menu">menu</button>
+
+    <h1 class="title" id="main-title">
+        <a href="/" class="logo">
+            大唐小沙弥的博客
+        </a>
+    </h1>
+    <h2 class="desc">
+        
+    </h2>
+
+    <div class="links">
+        <ul>
+            
+            <li>
+                <a target="_blank" rel="noopener" href="https://github.com/FrontendSophie">
+                    Github
+                </a>
+            </li>
+            
+            <li>
+                <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/frontendsophie/">
+                    LinkedIn
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</header>
+        <main class="main">
+            <article class="post">
+    
+    
+    
+    <h2 class="post-title">
+        20240107-AICT行业每周新闻（AI/ICT Weekly）
+    </h2>
+    <ul class="post-date">
+        <li>
+            2023-01-08
+        </li>
+        <li>
+            Dr Tang
+        </li>
+    </ul>
+    <div class="post-content">
+        <p>本期重点：   </p>
+<p>​        国家发展改革委 国家数据局关于印发《数字经济促进共同富裕实施方案》的通知；工业和信息化部办公厅关于公布2023年度绿色制造名单及试点推行“企业绿码”有关事项的通知；科技部发文规范AI使用 禁用AIGC直接生成申报材料，不得将生成式人工智能列为成果共同完成人；福布斯2024年十大AI趋势预测：颠覆性创新与挑战即将到来；英伟达中国特供版AI芯片H20将于二季度量产；CES 2024前瞻：人工智能技术应用更加深入；IDC企业出海大盘点 下一个蓝海在东南亚还是中东？；微软宣布 Win11 PC 键盘将新增 Copilot 键，可一键直达 AI 助手；2024开年，多地“算力补贴”领跑：深圳、成都、上海、杭州……</p>
+<p>作者：周莉（超聚变数字技术有限公司）</p>
+<span id="more"></span>
+
+<p>文章正文如下：</p>
+<table>
+<thead>
+<tr>
+<th>分类</th>
+<th>标题</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>政府通知</td>
+<td><a target="_blank" rel="noopener" href="https://www.ndrc.gov.cn/xxgk/zcfb/tz/202401/t20240104_1363096.html">国家发展改革委等部门关于加强新能源汽车与电网融合互动的实施意见</a></td>
+</tr>
+<tr>
+<td>政府通知</td>
+<td><a target="_blank" rel="noopener" href="https://www.ndrc.gov.cn/xxgk/zcfb/tz/202401/t20240105_1363120.html">国家发展改革委 国家数据局关于印发《数字经济促进共同富裕实施方案》的通知</a></td>
+</tr>
+<tr>
+<td>政府通知</td>
+<td><a target="_blank" rel="noopener" href="https://www.most.gov.cn/kjbgz/202312/t20231221_189240.html">科技部监督司发布《负责任研究行为规范指引（2023）》</a></td>
+</tr>
+<tr>
+<td>政府通知</td>
+<td><a target="_blank" rel="noopener" href="https://www.gov.cn/zhengce/zhengceku/202401/content_6924256.htm">工业和信息化部等十一部门关于开展“信号升格”专项行动的通知</a></td>
+</tr>
+<tr>
+<td>政府通知</td>
+<td><a target="_blank" rel="noopener" href="https://www.gov.cn/zhengce/zhengceku/202401/content_6924441.htm">应急管理部 工业和信息化部关于加快应急机器人发展的指导意见</a></td>
+</tr>
+<tr>
+<td>政府通知</td>
+<td><a target="_blank" rel="noopener" href="https://www.gov.cn/zhengce/zhengceku/202401/content_6924504.htm">工业和信息化部办公厅关于公布2023年度绿色制造名单及试点推行“企业绿码”有关事项的通知</a></td>
+</tr>
+<tr>
+<td>政府通知</td>
+<td><a target="_blank" rel="noopener" href="https://www.gov.cn/zhengce/zhengceku/202401/content_6924369.htm">关于印发《基本公共服务标准体系建设工程工作方案》的通知</a></td>
+</tr>
+<tr>
+<td>政府通知</td>
+<td><a target="_blank" rel="noopener" href="https://www.gov.cn/zhengce/zhengceku/202312/content_6923444.htm">工业和信息化部 国家标准化管理委员会关于印发《工业领域数据安全标准体系建设指南（2023版）》的通知</a></td>
+</tr>
+<tr>
+<td>政府通知</td>
+<td><a target="_blank" rel="noopener" href="https://www.gov.cn/zhengce/content/202312/content_6923310.htm">知识产权领域中央与地方财政事权和支出责任划分改革方案</a></td>
+</tr>
+<tr>
+<td>受限</td>
+<td><a target="_blank" rel="noopener" href="https://www.yicai.com/news/101944155.html">两款光刻机出口许可被撤销，ASML:影响了对个别中国客户发运设备</a></td>
+</tr>
+<tr>
+<td>人工智能</td>
+<td><a target="_blank" rel="noopener" href="https://tech.ifeng.com/c/8W5doef3tft">苹果迪士尼拒绝披露AI相关信息，遭美国证券会否决</a></td>
+</tr>
+<tr>
+<td>人工智能</td>
+<td><a target="_blank" rel="noopener" href="https://tech.ifeng.com/c/8W2wamg1hqa">科技部发文规范AI使用 禁用AIGC直接生成申报材料，不得将生成式人工智能列为成果共同完成人</a></td>
+</tr>
+<tr>
+<td>人工智能</td>
+<td><a target="_blank" rel="noopener" href="http://www.cbdio.com/BigData/2024-01/04/content_6176161.htm">钉钉联合国际知名咨询机构IDC发布首份《2024AIGC应用层十大趋势白皮书》</a></td>
+</tr>
+<tr>
+<td>人工智能</td>
+<td><a target="_blank" rel="noopener" href="http://www.xinhuanet.com/20240103/d404680386f54e1fafbae8e2a79fdb2d/c.html">中国信通院、中国智能算力产业联盟等机构，联合发布《新一代人工智能基础设施白皮书》</a></td>
+</tr>
+<tr>
+<td>人工智能</td>
+<td><a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000044518951">福布斯2024年十大AI趋势预测：颠覆性创新与挑战即将到来（中文概要版）</a></td>
+</tr>
+<tr>
+<td>人工智能</td>
+<td><a target="_blank" rel="noopener" href="https://www.sohu.com/a/748318088_121652971">SuperCLUE团队：中文大模型基准测评2023年度报告</a></td>
+</tr>
+<tr>
+<td>人工智能</td>
+<td><a target="_blank" rel="noopener" href="http://www.news.cn/2023-12/29/c_1212321877.htm">信通院：《2023大模型落地应用案例集》发布</a></td>
+</tr>
+<tr>
+<td>人工智能</td>
+<td><a target="_blank" rel="noopener" href="https://www.ithome.com/0/743/472.htm?sf=NaBLO/cNdvLZWwP+v8aCxOVDybh8IbKIRgvA9WD5ixn9SLqmN5gPN/QObQ3MQbXJbrPZcp38zwc=">AI 解锁新技能：分析街景图片实现定位，准确率 92%</a></td>
+</tr>
+<tr>
+<td>人工智能</td>
+<td><a target="_blank" rel="noopener" href="https://www.ithome.com/0/743/443.htm?sf=NaBLO/cNdvLZWwP+v8aCxOVDybh8IbKIRgvA9WD5ixnVxdIWsKFJ/vQObQ3MQbXJWbokf+EUzMo=">为训练大模型“花钱买新闻”？OpenAI 拟向传媒公司支付数百万美元年费</a></td>
+</tr>
+<tr>
+<td>人工智能</td>
+<td><a target="_blank" rel="noopener" href="https://www.ithome.com/0/742/981.htm?sf=NaBLO/cNdvLZWwP+v8aCxOVDybh8IbKIRgvA9WD5ixlFAIQQMPeAHmhgYm1jDox/1P9zqNobW6E=">年度最热 AI 应用 TOP 50，除了 ChatGPT 还有这么多宝藏</a></td>
+</tr>
+<tr>
+<td>人工智能</td>
+<td><a target="_blank" rel="noopener" href="https://www.ithome.com/0/742/817.htm?sf=NaBLO/cNdvLZWwP+v8aCxOVDybh8IbKIRgvA9WD5ixkd8aVxZU5s42hgYm1jDox/2KLvn14T5mw=">ChatGPT 变笨新解释：世界被 AI 改变，与训练时不同了-“任务污染”问题</a></td>
+</tr>
+<tr>
+<td>人工智能</td>
+<td><a target="_blank" rel="noopener" href="https://www.ithome.com/0/742/689.htm">欧盟首台百亿亿次级超级计算机 JUPITER 将于 2024 年安装，采用约 24000 个英伟达 GH200 GPU</a></td>
+</tr>
+<tr>
+<td>人工智能</td>
+<td><a target="_blank" rel="noopener" href="https://www.ithome.com/0/742/340.htm">工信部等八部门：探索建设区域人工智能数据处理中心</a></td>
+</tr>
+<tr>
+<td>人工智能</td>
+<td><a target="_blank" rel="noopener" href="https://tech.huanqiu.com/article/4G39hBvU9IS">CES 2024前瞻：人工智能技术应用更加深入</a></td>
+</tr>
+<tr>
+<td>人工智能</td>
+<td><a target="_blank" rel="noopener" href="https://www.chinaso.com/link?url=zAA7JaUqJIoFw2ssn5DtT9auFA2rqAXikddP2iPyrX4Q/WT2GaajaK/V85mY8yD7">AI服务器市场有多大?被动元器件的机会来了</a></td>
+</tr>
+<tr>
+<td>Gartner</td>
+<td><a target="_blank" rel="noopener" href="https://www.secrss.com/articles/62529">Gartner发布2024年网络安全9大趋势</a></td>
+</tr>
+<tr>
+<td>Gartner</td>
+<td><a target="_blank" rel="noopener" href="https://www.chinaso.com/link?url=zR8SyMiw6phb3g2zKuczLcEN0ySAG0En2FywjPActiE5VgCpjnizE1CFFvIVGKYxoFIHgOp8HN2aB7k4N4qhTA==">Gartner最新报告：2023年全球数据库市场规模首破千亿美元</a></td>
+</tr>
+<tr>
+<td>IDC</td>
+<td><a target="_blank" rel="noopener" href="https://www.idc.com/getdoc.jsp?containerId=prCHC51727324">《中国云原生基础设施技术能力评估报告，2023》</a></td>
+</tr>
+<tr>
+<td>IDC</td>
+<td><a target="_blank" rel="noopener" href="https://www.idc.com/getdoc.jsp?containerId=prCHC51607324">政务大模型驱动的政府知识应用市场分析</a></td>
+</tr>
+<tr>
+<td>IDC</td>
+<td><a target="_blank" rel="noopener" href="https://www.idc.com/getdoc.jsp?containerId=prCHC51607424">格局未定，曙光初现——《IDC MarketScape: 中国低代码&#x2F;无代码开发平台 2023 年厂商评估》</a></td>
+</tr>
+<tr>
+<td>IDC</td>
+<td><a target="_blank" rel="noopener" href="https://www.idc.com/getdoc.jsp?containerId=prCHC51607124">2024年中国PC市场十大洞察</a></td>
+</tr>
+<tr>
+<td>信创</td>
+<td><a target="_blank" rel="noopener" href="https://itaiob.com/portal.php?mod=view&aid=372">详解2023年“央国企信创”趋势及进展</a></td>
+</tr>
+<tr>
+<td>信创</td>
+<td><a target="_blank" rel="noopener" href="https://itaiob.com/portal.php?mod=view&aid=371">北京市信创新政《关于打造国家信创产业高地三年行动方案（2023-2025年）》重磅发布</a></td>
+</tr>
+<tr>
+<td>信创</td>
+<td><a target="_blank" rel="noopener" href="https://www.chinaso.com/link?url=XGOgOmRB2jNm8k/G4YeZpwVkKFQWJkHaTWd5joXBId7UYmBuZtaTiV4AC6BWAsBNNjhv6GpUwGCls67vwvqVgZBMflSXGAGO4mOxOAGE7vknlLNC7fFpiXw+P4Cw2cBa">46万家国企、131家央企信创怎么做？</a></td>
+</tr>
+<tr>
+<td>量子计算</td>
+<td><a target="_blank" rel="noopener" href="https://www.secrss.com/articles/62422">意义深远！中俄首次成功测试“完整周期”量子通信，距离长达3800公里</a></td>
+</tr>
+<tr>
+<td>量子计算</td>
+<td><a target="_blank" rel="noopener" href="http://news.idcquan.com/news/201351.shtml">新型算力满足人类对计算需求的增长——量子计算应用思享会侧记</a></td>
+</tr>
+<tr>
+<td>数据中心</td>
+<td><a target="_blank" rel="noopener" href="http://www.idcquan.com/xw/201331.shtml">PUE≤1.147   北京发改委新通过 腾讯、亿讯数字经济产业园-智慧交通算力中心项目（三期）节能审查</a></td>
+</tr>
+<tr>
+<td>数据中心</td>
+<td><a target="_blank" rel="noopener" href="http://news.idcquan.com/news/201357.shtml">投资10亿，四省边际智算中心项目签约</a></td>
+</tr>
+<tr>
+<td>数据中心</td>
+<td><a target="_blank" rel="noopener" href="http://news.idcquan.com/talk/201344.shtml">专访越南CMC电信：为中企出海越南   提供不止IDC的全面服务</a></td>
+</tr>
+<tr>
+<td>数据中心</td>
+<td><a target="_blank" rel="noopener" href="http://www.idcquan.com/gjzx/201129.shtml">IDC企业出海大盘点 下一个蓝海在东南亚还是中东？</a></td>
+</tr>
+<tr>
+<td>自动驾驶</td>
+<td><a target="_blank" rel="noopener" href="https://www.ithome.com/0/743/428.htm?sf=NaBLO/cNdvLZWwP+v8aCxOVDybh8IbKIRgvA9WD5ixnhSxYP85x8I/QObQ3MQbXJBCTA4fQpYaU=">17 部门：支持自动驾驶汽车在特定区域、特定时段进行商业化试运营试点</a></td>
+</tr>
+<tr>
+<td>新能源汽车</td>
+<td><a target="_blank" rel="noopener" href="http://www.news.cn/tech/20240104/496a0ac0a1c8419aaa3e92134d99dcb3/c.html">2024年我国将贡献全球新能源汽车60%销量</a></td>
+</tr>
+<tr>
+<td>新能源汽车</td>
+<td><a target="_blank" rel="noopener" href="https://www.chinaso.com/link?url=+5l3kbhqZXUo9W+Tfs3XV8MNWUI047M5eFOq8R0hfs6+wIoSb1bN5kSpknPGg83ESEoCNIcpSk47aC/4bTylit/IkB1k4B33SQSdWBXZHOY=">2024年中国新能源汽车产业链图谱研究分析（附产业链全景图）</a></td>
+</tr>
+<tr>
+<td>自动驾驶</td>
+<td><a target="_blank" rel="noopener" href="https://www.chinaso.com/link?url=qVlQnnzTU35E/Yq/64aSHEtgh+V5vNVcZA/VidRe43qmEBvSg/Piy7P1pEAYkvpbk63rsxIoA5Uq8CDhbGyGKOougcYFLg+uoa+VeSbjPouMkmwaDkpjb5Mjh1e2LazG">自动驾驶技术公司Mobileye股价暴跌 客户汽车芯片库存过剩拖累</a></td>
+</tr>
+<tr>
+<td>芯片</td>
+<td><a target="_blank" rel="noopener" href="https://www.chinaso.com/link?url=1PwE6CNqEBgyWuum4LaI9qzCWQt88s0ow0Vkm5C62/2VRlAG1iC2Myk3UlSMl56h2zy34o4Hh6DD8WY2XmvWlw==">高通发布第二代骁龙XR2+芯片 VR设备再升级</a></td>
+</tr>
+<tr>
+<td>半导体</td>
+<td><a target="_blank" rel="noopener" href="https://tech.ifeng.com/c/8W4uERA0jXX">世界上第一个石墨烯半导体问世！比硅快10倍</a></td>
+</tr>
+<tr>
+<td>东数西算</td>
+<td><a target="_blank" rel="noopener" href="https://www.chinaso.com/link?url=ybm5+6Am6Si9SzuOK+Fvk6W6krGtAYWCdCplHw5DLhct/DP/Se7vHKDy5vU8IA2Q">两部门：深入实施“东数西算”工程，弥合区域“数字鸿沟”</a></td>
+</tr>
+<tr>
+<td>工业互联网</td>
+<td><a target="_blank" rel="noopener" href="https://www.chinaso.com/link?url=OUqLy7QziT0D1gaZ75e5mOI0ipCl0nHAnQtDMCyuhKtdnvj/WQOU8u1UVV2USP20aopj6ebC7tQOVKQY1FSrtQ==">工信部：5项工业互联网平台国家标准发布实施</a></td>
+</tr>
+<tr>
+<td>互联网</td>
+<td><a target="_blank" rel="noopener" href="https://www.sohu.com/a/747235689_130887?scm=1102.xchannel:676:110036.0.1.0~9010.8000.0.5.1829&spm=smpc.channel_218.block7_109_O66XV8_2_fd.5.1703548800010DA5oXoZ_499">2024年互联网十大趋势：即将被AI改变的行业们</a></td>
+</tr>
+<tr>
+<td>互联网</td>
+<td><a target="_blank" rel="noopener" href="https://www.isc.org.cn/article/19261911263997952.html">中国互联网协会发布 “2023年影响中国互联网行业发展的十件大事”</a></td>
+</tr>
+<tr>
+<td>网络安全</td>
+<td><a target="_blank" rel="noopener" href="https://www.secrss.com/articles/62525">电信网络运行重大事故：一个账号被盗，一个国家大面积断网数小时</a></td>
+</tr>
+<tr>
+<td>网络安全</td>
+<td><a target="_blank" rel="noopener" href="https://www.secrss.com/articles/62523">《网络安全信息报送指南》等5项网络安全国家标准获批发布</a></td>
+</tr>
+<tr>
+<td>网络安全</td>
+<td><a target="_blank" rel="noopener" href="https://www.secrss.com/articles/62524">《信息安全技术   网络安全产品互联互通告警信息格式》等4项国家标准公开征求意见</a></td>
+</tr>
+<tr>
+<td>网络安全</td>
+<td><a target="_blank" rel="noopener" href="https://www.secrss.com/articles/62526">美国防部网络安全成熟度模型认证   (CMMC) 计划拟议规则要点概述</a></td>
+</tr>
+<tr>
+<td>网络安全</td>
+<td><a target="_blank" rel="noopener" href="https://www.secrss.com/articles/62412">工信部：2023年工信领域网络和数据安全保障情况图解</a></td>
+</tr>
+<tr>
+<td>存储</td>
+<td><a target="_blank" rel="noopener" href="https://www.prnasia.com/story/432779-1.shtml">澜起科技推出支持7200 MT&#x2F;s速率的DDR5第四子代RCD芯片</a></td>
+</tr>
+<tr>
+<td>存储</td>
+<td><a target="_blank" rel="noopener" href="https://www.chinaso.com/link?url=6AvANyudYdK9XWs0Csu/FIc3JlTTptji19InGkj5WLIWj2hPm4XMRzEMhoZK2fqV">全球第二款24TB硬盘问世！希捷AI酷鹰系列再升级</a></td>
+</tr>
+<tr>
+<td>Apple</td>
+<td><a target="_blank" rel="noopener" href="https://tech.ifeng.com/c/8W5dBuz0LmO">市值一夜蒸发7600亿，这对全球股市有何影响？</a></td>
+</tr>
+<tr>
+<td>Intel</td>
+<td><a target="_blank" rel="noopener" href="https://tech.ifeng.com/c/8W5jtco1lnQ">英特尔任命Justin   Hotard为至强处理器和GPU业务新主管</a></td>
+</tr>
+<tr>
+<td>Intel</td>
+<td><a target="_blank" rel="noopener" href="https://tech.ifeng.com/c/8W47It2kGt3">英特尔宣布成立新AI公司“Articul8”：专为企业客户提供生成式人工智能软件</a></td>
+</tr>
+<tr>
+<td>Intel</td>
+<td><a target="_blank" rel="noopener" href="https://www.chinaso.com/link?url=lewL86PGz4v6fSVTUwr0KUlriUvjQV6pV7KjXCK4EchS5gR9bSG19CkioDTopOpN">至强CPU史上首次一年发两代！Intel在卷什么</a></td>
+</tr>
+<tr>
+<td>Nvidia</td>
+<td><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/2377174">英伟达中国特供版AI芯片H20将于二季度量产</a></td>
+</tr>
+<tr>
+<td>Nvidia</td>
+<td><a target="_blank" rel="noopener" href="https://www.toutiao.com/article/7320522463308759588/">NVIDIA RTX 5880 Ada发布：14080 个核心、48 GB GDDR6、285W TDP</a></td>
+</tr>
+<tr>
+<td>Tesla</td>
+<td><a target="_blank" rel="noopener" href="https://news.southcn.com/node_179d29f1ce/1ef3117150.shtml">市场监管总局：特斯拉宣布召回超160万辆车</a></td>
+</tr>
+<tr>
+<td>阿里</td>
+<td><a target="_blank" rel="noopener" href="https://www.chinaso.com/link?url=N0AHdAD5mKr2w6Oo4ZYuxPcRE3bc9/hHYBUj87Vfnjzh4HQQfAkExm4yDokYn/OcJG2wXW4l7i7TnHrRfBmu8J7ex/juOHCQjZ3yRll62Z8=">阿里云宣布裁员50%，iot平台玩家头顶的“如何盈利”？</a></td>
+</tr>
+<tr>
+<td>百度</td>
+<td><a target="_blank" rel="noopener" href="https://www.sohu.com/a/749231776_121627717">百度拟将量子实验室捐赠予北京量子院</a></td>
+</tr>
+<tr>
+<td>百度</td>
+<td><a target="_blank" rel="noopener" href="http://www.cbdio.com/BigData/2024-01/02/content_6176140.htm">百度公告：终止JOYY购买协议，36亿美元收购案终止</a></td>
+</tr>
+<tr>
+<td>华为</td>
+<td><a target="_blank" rel="noopener" href="https://www.chinaso.com/link?url=zqVQu0c0p1Ou1zCZThsHfoix19ewcpDy6SrBH3Gys163hCDVkKpZj7ii3m4/77K3dWI3IjCA+c11UpWCZcVivg==">华为穿戴超进化 将时光雕琢为高光</a></td>
+</tr>
+<tr>
+<td>京东</td>
+<td><a target="_blank" rel="noopener" href="https://www.chinaso.com/link?url=koWOJ+fw4SmjW47R9tQkLKVlsVywt2fbluTwbZX8QZtHNjW9eQnbe159sVz0DI/dAWUzsvuHxY8PL9yENkL6/7RbnUBTak7JvnZeUJ8YM4Y=">京东采销跨年直播战报:5小时吸引1亿人次观看 订单量近40万</a></td>
+</tr>
+<tr>
+<td>台积电</td>
+<td><a target="_blank" rel="noopener" href="https://www.chinaso.com/link?url=p6Lx6FFIKu35vYAcjZvB68KAD1jey+vzHkmy4prfEEOHBGOwIo/wzlr4JH5YpEkx3cpXgd27uVqknoV2LuvHpA==">英伟达、AMD等转向台积电第二代3nm，预计产能大幅提升</a></td>
+</tr>
+<tr>
+<td>台积电</td>
+<td><a target="_blank" rel="noopener" href="https://www.chinaso.com/link?url=1PwE6CNqEBgyWuum4LaI9qzCWQt88s0ow0Vkm5C62/1MSc2KwfPZhoYNeUbhjchT2zy34o4Hh6DD8WY2XmvWlw==">痛失500亿！ASML唯一2nm设备花落美企，台积电：为什么总是我受伤</a></td>
+</tr>
+<tr>
+<td>腾讯</td>
+<td><a target="_blank" rel="noopener" href="https://www.chinaso.com/link?url=92RKXbTXwBz/um3c4zZnUNcCiABmpCpqT3IF5C3sUZawEBlluktk/txQG00oQTS6uRjR7xJCniLRV1rJ7Zc0HEjDyZM3Dq4CLq3fbuK4jpEKpCvqZFS/eyA65cJIG+zpswvnmW9UazbFfnOLFVZfeLBCIF5FOmMTVWCykvmCQY20GtDP7gw1dY4amsgWLkyIJi/bZVpiJvlb7TsHM05xm9+RnkUp6hgRrNsBy33CGi0LWqWXZjL7TKQfqUzpOjPV7eyfnlJ/ZvxNsciFCHvr9pzYfZU+pEeeHn7u7/2Sz5iDfj/jXpW5BL5R/yAfBlQ7Ta6I5HYIcbRjEbVP1WTjzQ==">以效为先，百路皆通——2024腾讯智慧营销峰会</a></td>
+</tr>
+<tr>
+<td>微软</td>
+<td><a target="_blank" rel="noopener" href="https://www.ithome.com/0/743/377.htm?sf=NaBLO/cNdvLZWwP+v8aCxOVDybh8IbKIRgvA9WD5ixmAL0qn3iw8yvQObQ3MQbXJJ/NAjBK4R/0=">微软宣布 Win11 PC 键盘将新增 Copilot 键，可一键直达 AI 助手</a></td>
+</tr>
+<tr>
+<td>字节跳动</td>
+<td><a target="_blank" rel="noopener" href="https://tech.ifeng.com/c/8W41MNmMhPb">挑战亚马逊：消息称TikTok计划使美国电商业务规模扩大十倍，达1249.5亿元</a></td>
+</tr>
+<tr>
+<td>字节跳动</td>
+<td><a target="_blank" rel="noopener" href="https://www.chinaso.com/link?url=OzGT7iirC1CKC/WzZLe5GgLKUI1h5K9aD23m3v6MPuv5bEZL/hz+OU1gVH0imF+W">字节跳动旗下懂车帝入局汽车养服市场，试水新业务</a></td>
+</tr>
+<tr>
+<td>其他</td>
+<td><a target="_blank" rel="noopener" href="https://c.m.163.com/news/a/INID3L6C0552IBJ1.html?spss=backflow-index-hotlist">日本地震，多家半导体工厂暂停生产</a></td>
+</tr>
+<tr>
+<td>其他</td>
+<td><a target="_blank" rel="noopener" href="http://news.idcquan.com/news/201359.shtml">2024开年，多地“算力补贴”领跑：深圳、成都、上海、杭州</a></td>
+</tr>
+<tr>
+<td>其他</td>
+<td><a target="_blank" rel="noopener" href="http://www.news.cn/tech/20240104/c50ee538735d486595b87346d8704670/c.html">加快构建全国一体化算力网——国家数据局主要负责同志答记者问</a></td>
+</tr>
+<tr>
+<td>其他</td>
+<td><a target="_blank" rel="noopener" href="http://www.cbdio.com/BigData/2024-01/04/content_6176153.htm">2024年电子信息制造业基本形势研判</a></td>
+</tr>
+<tr>
+<td>其他</td>
+<td><a target="_blank" rel="noopener" href="https://finance.sina.cn/tech/2023-12-29/detail-imzzsqhx5774228.d.html?fromtech=1&from=wap">国家数据局首场媒体吹风会：数据何以借力“数据要素×”行动乘风而起？</a></td>
+</tr>
+<tr>
+<td>其他</td>
+<td><a target="_blank" rel="noopener" href="http://cpc.people.com.cn/n1/2024/0103/c64387-40151629.html">以科技创新引领现代化产业体系建设——工业和信息化部有关负责人谈落实中央经济工作会议精神</a></td>
+</tr>
+<tr>
+<td>其他</td>
+<td><a target="_blank" rel="noopener" href="http://cpc.people.com.cn/n1/2024/0103/c64387-40151628.html">聚焦新兴产业8个领域和未来产业9个领域——为新产业定标准、促发展（经济新方位）</a></td>
+</tr>
+<tr>
+<td>其他</td>
+<td><a target="_blank" rel="noopener" href="http://www.cbdio.com/BigData/2024-01/03/content_6176142.htm">2023年世界科技发展回顾·数字技术篇</a></td>
+</tr>
+<tr>
+<td>其他</td>
+<td><a target="_blank" rel="noopener" href="https://www.toutiao.com/article/7320364901711692322/">欧洲央行制定13亿欧元规模的数字欧元开发计划</a></td>
+</tr>
+<tr>
+<td>其他</td>
+<td><a target="_blank" rel="noopener" href="http://www.news.cn/fortune/20240105/12675bf39c9d4c1f88eea0746ec45550/c.html">联合国发布《2024年世界经济形势与展望》报告：预测2024年世界经济将放缓</a></td>
+</tr>
+<tr>
+<td>其他</td>
+<td><a target="_blank" rel="noopener" href="https://www.yicai.com/news/101947333.html">国家数据局等17部门：到2026年底，数据产业年均增速超过20%</a></td>
+</tr>
+<tr>
+<td>其他</td>
+<td><a target="_blank" rel="noopener" href="https://www.yicai.com/news/101943759.html">“十四五”规划实施进程过半，这里有一张成绩单</a></td>
+</tr>
+<tr>
+<td>其他</td>
+<td><a target="_blank" rel="noopener" href="https://www.yicai.com/news/101943443.html">印度法院下令释放两名vivo公司高管</a></td>
+</tr>
+<tr>
+<td>其他</td>
+<td><a target="_blank" rel="noopener" href="https://www.yicai.com/news/101943346.html">央行同意支付宝   (中国) 变更为无实际控制人</a></td>
+</tr>
+<tr>
+<td>其他</td>
+<td><a target="_blank" rel="noopener" href="https://www.sohu.com/a/749705617_100106801?scm=1102.xchannel:676:110036.0.1.0~9010.8000.0.0.1829&spm=smpc.channel_218.block7_109_O66XV8_2_fd.5.1704430800010DA5oXoZ_499">雷军颁发两个百万美金大奖，软硬件与AI深度融合时代正式开启</a></td>
+</tr>
+<tr>
+<td>其他</td>
+<td><a target="_blank" rel="noopener" href="https://www.chinaso.com/link?url=RVQJnCWogMX1bP/nXr3DXKC0z8/2VSGaXSnl5QVj5zHTiF+X9GyI11RSUaWZHf4BsvtY2P5T1lI2lmoSvMOAHuj0aI6OkbVRaWZSDavBsfY=">CES 2024：英伟达、英特尔、SK海力士等将放大招！</a></td>
+</tr>
+<tr>
+<td>其他</td>
+<td><a target="_blank" rel="noopener" href="https://www.chinaso.com/link?url=W4IZgCMRWXUNT+9jd9ieGsQOyGTsTi7MVbUt2zns/Jqrn4bQ4tANWRSYfflJWEOt">豪赌AI，微软、谷歌、亚马逊们的新战争</a></td>
+</tr>
+<tr>
+<td>其他</td>
+<td><a target="_blank" rel="noopener" href="https://www.chinaso.com/link?url=3yH4UlkbctVNfSVWSKw04/omJdX848Mz3DBP8+ZjYIyqAgHIUyRSDD2bXltopNDs">大厂再回购！腾讯去年已花400亿元总额超过去10年，阿里也用了679亿元</a></td>
+</tr>
+</tbody></table>
+
+    </div>
+</article>
+        </main>
+        <aside class="aside">
+            <div class="close"></div>
+            <section class="aside-section">
+                
+    <h1>Categories</h1>
+
+    
+
+            </section>
+            <section class="aside-section">
+                
+    <h1>Archives</h1>
+
+    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/">2023</a></li></ul>
+
+
+            </section>
+            <section class="aside-section tag">
+                
+    <h1>Tags</h1>
+
+    
+
+            </section>
+        </aside>
+    </div>
+</body>
+
+</html>

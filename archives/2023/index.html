@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <meta name="keywords" content="hexo, autumn" />
+    <title>
+        大唐小沙弥的博客
+    </title>
+    <!-- favicon -->
+    
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/frontendsophie/hexo-theme-autumn@1.0.0/source/img/favicon.ico" />
+     
+<link rel="stylesheet" href="/css/style.css">
+
+
+    <!-- highlight -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/github-gist.min.css" />
+    <script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad()
+    </script>
+    <script src="https://cdn.jsdelivr.net/gh/frontendsophie/hexo-infinite-scroll@2.0.0/dist/main.js"></script>
+
+    <script>
+        infiniteScroll()
+
+        window.addEventListener('DOMContentLoaded', function () {
+            const [
+                mainTitle,
+                mobileMenu,
+                mobileMainTitle,
+                mobileMenuBtn,
+                ipadMenuBtn,
+                aside,
+                closeBtn,
+            ] = getEle(
+                '#main-title',
+                '.mobile-menu',
+                '.mobile-menu h3',
+                '.mobile-menu button',
+                '.ipad-menu',
+                'aside',
+                'aside .close',
+            )
+            const io = new IntersectionObserver(entries => {
+                if (entries[0].intersectionRatio <= 0) {
+                    mobileMainTitle.classList.remove('invisibile')
+                } else {
+                    mobileMainTitle.classList.add('invisibile')
+                }
+            })
+            io.observe(mainTitle)
+
+            clickToggleAside(mobileMenuBtn)
+            clickToggleAside(ipadMenuBtn)
+            clickToggleAside(closeBtn, false)
+
+            const isMenuVisible = window.getComputedStyle(mobileMenu).display !== 'none'
+            if (isMenuVisible) document.body.style.background = 'none'
+
+            function getEle(...args) {
+                return args.map(arg => document.querySelector(arg))
+            }
+
+            function clickToggleAside(btn, show = true) {
+                btn.addEventListener('click', function () {
+                    if (show) {
+                        aside.style.display = 'block'
+                    } else {
+                        aside.style.display = 'none'
+                    }
+                })
+            }
+        })
+    </script>
+<meta name="generator" content="Hexo 7.1.1"></head>
+
+<body style="background: url(https://cdn.jsdelivr.net/gh/frontendsophie/hexo-theme-autumn@1.0.0/source/img/button-bg.png) #f3f3f3">
+    <div class="container">
+        <header class="header">
+    <nav class="mobile-menu" style="background: url(https://cdn.jsdelivr.net/gh/frontendsophie/hexo-theme-autumn@1.0.0/source/img/button-bg.png) #f3f3f3">
+        <h3 class="invisibile">
+            <a href="/" class="logo">
+                大唐小沙弥的博客
+            </a>
+        </h3>
+        <button class="menu">menu</button>
+    </nav>
+
+    <button class="ipad-menu menu">menu</button>
+
+    <h1 class="title" id="main-title">
+        <a href="/" class="logo">
+            大唐小沙弥的博客
+        </a>
+    </h1>
+    <h2 class="desc">
+        
+    </h2>
+
+    <div class="links">
+        <ul>
+            
+            <li>
+                <a target="_blank" rel="noopener" href="https://github.com/FrontendSophie">
+                    Github
+                </a>
+            </li>
+            
+            <li>
+                <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/frontendsophie/">
+                    LinkedIn
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</header>
+        <main class="main">
+            
+<section class="posts">
+    
+        <article class="post">
+            
+                    <h1 class="post-title">
+                        <a href="/2023/01/22/20240122-AICT%E8%A1%8C%E4%B8%9A%E6%AF%8F%E5%91%A8%E6%96%B0%E9%97%BB/">
+                            20240122-AICT行业每周新闻（AI/ICT Weekly）
+                        </a>
+                    </h1>
+
+                    <ul class="post-date">
+                        <li>
+                            2023年1月22日
+                        </li>
+                        <li>
+                            Dr Tang
+                        </li>
+                    </ul>
+                    
+                    <div class="post-content ">
+                        <p>本期重点：   </p>
+<p>​       五部门关于开展智能网联汽车“车路云一体化”应用试点工作的通知；关于2024年宏观经济政策，最新回应；国新办举行解读宏观经济形势和政策新闻发布会；数百万苹果、AMD和高通GPU被发现漏洞：或暴露AI大模型数据；人工智能+半导体+算力等细分企业名单大汇总；11省市发布地方版“数据二十条”；聚焦两会，多地区提出明确算力建设目标；2023年勒索软件攻击盘点：43个组织搞事5200起，41%受害者付钱消灾；收购不到2年就放弃！AMD狠心砍掉两大产品线；全面脱离安卓！华为今日开启鸿蒙生态启航 ：纯血鸿蒙马上开放；数字经济成为全球经济发展重要支撑-测算51个国家数字经济增加值规模为41.4万亿美元，占GDP比重的46.1％……</p>
+<p>作者：周莉（超聚变数字技术有限公司）</p>
+                            <a href="/2023/01/22/20240122-AICT%E8%A1%8C%E4%B8%9A%E6%AF%8F%E5%91%A8%E6%96%B0%E9%97%BB/" class="more-link">Continue reading</a>
+                    </div>
+        </article>
+        
+        <article class="post">
+            
+                    <h1 class="post-title">
+                        <a href="/2023/01/15/20240115-AICT%E8%A1%8C%E4%B8%9A%E6%AF%8F%E5%91%A8%E6%96%B0%E9%97%BB/">
+                            20240115-AICT行业每周新闻（AI/ICT Weekly）
+                        </a>
+                    </h1>
+
+                    <ul class="post-date">
+                        <li>
+                            2023年1月15日
+                        </li>
+                        <li>
+                            Dr Tang
+                        </li>
+                    </ul>
+                    
+                    <div class="post-content ">
+                        <p>本期重点：   </p>
+<p>​       财政部资产管理司印发《关于加强数据资产管理的指导意见》的通知；工业和信息化部办公厅关于印发国家汽车芯片标准体系建设指南的通知；超4000家厂商参加国际消费电子展 AI与PC融合成焦点；OpenAI宣布正式推出GPT商店（GPT Store）和ChatGPT Team服务，全网超300万个；我国第三代自主超导量子计算机“本源悟空”上线运行；智算中心都建在哪儿了；中国第三代自主超导量子芯片“悟空芯”发布；谷歌AI芯片侵权案今日开庭，谷歌或赔偿16.7亿美元；慧与拟以140亿美元全现金收购瞻博网络；阿里云第八代企业级实例g8i算力升级：整机性能提升85% AI推理最高提速7倍；《麻省理工科技评论》发布：2024 年“十大突破性技术”榜单……</p>
+<p>作者：周莉（超聚变数字技术有限公司）</p>
+                            <a href="/2023/01/15/20240115-AICT%E8%A1%8C%E4%B8%9A%E6%AF%8F%E5%91%A8%E6%96%B0%E9%97%BB/" class="more-link">Continue reading</a>
+                    </div>
+        </article>
+        
+        <article class="post">
+            
+                    <h1 class="post-title">
+                        <a href="/2023/01/08/20240107-%E8%B6%85%E8%81%9A%E5%8F%98%E4%B8%9A%E7%95%8C%E6%96%B0%E9%97%BB%E5%8A%A8%E6%80%81/">
+                            20240107-AICT行业每周新闻（AI/ICT Weekly）
+                        </a>
+                    </h1>
+
+                    <ul class="post-date">
+                        <li>
+                            2023年1月8日
+                        </li>
+                        <li>
+                            Dr Tang
+                        </li>
+                    </ul>
+                    
+                    <div class="post-content ">
+                        <p>本期重点：   </p>
+<p>​        国家发展改革委 国家数据局关于印发《数字经济促进共同富裕实施方案》的通知；工业和信息化部办公厅关于公布2023年度绿色制造名单及试点推行“企业绿码”有关事项的通知；科技部发文规范AI使用 禁用AIGC直接生成申报材料，不得将生成式人工智能列为成果共同完成人；福布斯2024年十大AI趋势预测：颠覆性创新与挑战即将到来；英伟达中国特供版AI芯片H20将于二季度量产；CES 2024前瞻：人工智能技术应用更加深入；IDC企业出海大盘点 下一个蓝海在东南亚还是中东？；微软宣布 Win11 PC 键盘将新增 Copilot 键，可一键直达 AI 助手；2024开年，多地“算力补贴”领跑：深圳、成都、上海、杭州……</p>
+<p>作者：周莉（超聚变数字技术有限公司）</p>
+                            <a href="/2023/01/08/20240107-%E8%B6%85%E8%81%9A%E5%8F%98%E4%B8%9A%E7%95%8C%E6%96%B0%E9%97%BB%E5%8A%A8%E6%80%81/" class="more-link">Continue reading</a>
+                    </div>
+        </article>
+        
+        <article class="post">
+            
+                    <h1 class="post-title">
+                        <a href="/2023/01/04/20231231-%E8%B6%85%E8%81%9A%E5%8F%98%E4%B8%9A%E7%95%8C%E6%96%B0%E9%97%BB%E5%8A%A8%E6%80%81/">
+                            20231231-AICT行业每周新闻（AI/ICT Weekly）
+                        </a>
+                    </h1>
+
+                    <ul class="post-date">
+                        <li>
+                            2023年1月4日
+                        </li>
+                        <li>
+                            Dr Tang
+                        </li>
+                    </ul>
+                    
+                    <div class="post-content ">
+                        <p>本期重点：  </p>
+<p>​        财政部印发关于工作站、一体式计算机、便携式计算机、台式计算机、通用服务器、操作系统、数据库政府采购需求标准（2023年版）通知；国家发展改革委、国家数据局等五部门联合印发《深入实施“东数西算”工程 加快构建全国一体化算力网的实施意见》；深圳2024新建数据中心报送开启：设定PUE不高于1.25，绿电使用率超过50%等要求；英伟达正式发布中国特供版RTX 4090 D：AI性能大降10%，售价还是1万3；行业唯一！ 赛力斯获两地L3级自动驾驶测试牌照：问界M9可跑；多个全国性会议，传递2024经济工作重要信号；博通宣布终止现有 vmware 合作伙伴计划，经销商重新签约需营收流水 50 万美元以上……</p>
+<p>作者：周莉（超聚变数字技术有限公司）</p>
+                            <a href="/2023/01/04/20231231-%E8%B6%85%E8%81%9A%E5%8F%98%E4%B8%9A%E7%95%8C%E6%96%B0%E9%97%BB%E5%8A%A8%E6%80%81/" class="more-link">Continue reading</a>
+                    </div>
+        </article>
+        
+</section>
+
+        </main>
+        <aside class="aside">
+            <div class="close"></div>
+            <section class="aside-section">
+                
+    <h1>Categories</h1>
+
+    
+
+            </section>
+            <section class="aside-section">
+                
+    <h1>Archives</h1>
+
+    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/">2023</a></li></ul>
+
+
+            </section>
+            <section class="aside-section tag">
+                
+    <h1>Tags</h1>
+
+    
+
+            </section>
+        </aside>
+    </div>
+</body>
+
+</html>
