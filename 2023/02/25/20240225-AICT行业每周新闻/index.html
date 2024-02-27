@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <meta name="keywords" content="hexo, autumn" />
+    <title>
+        大唐小沙弥的博客
+    </title>
+    <!-- favicon -->
+    
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/frontendsophie/hexo-theme-autumn@1.0.0/source/img/favicon.ico" />
+     
+<link rel="stylesheet" href="/css/style.css">
+
+
+    <!-- highlight -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/github-gist.min.css" />
+    <script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad()
+    </script>
+    <script src="https://cdn.jsdelivr.net/gh/frontendsophie/hexo-infinite-scroll@2.0.0/dist/main.js"></script>
+
+    <script>
+        infiniteScroll()
+
+        window.addEventListener('DOMContentLoaded', function () {
+            const [
+                mainTitle,
+                mobileMenu,
+                mobileMainTitle,
+                mobileMenuBtn,
+                ipadMenuBtn,
+                aside,
+                closeBtn,
+            ] = getEle(
+                '#main-title',
+                '.mobile-menu',
+                '.mobile-menu h3',
+                '.mobile-menu button',
+                '.ipad-menu',
+                'aside',
+                'aside .close',
+            )
+            const io = new IntersectionObserver(entries => {
+                if (entries[0].intersectionRatio <= 0) {
+                    mobileMainTitle.classList.remove('invisibile')
+                } else {
+                    mobileMainTitle.classList.add('invisibile')
+                }
+            })
+            io.observe(mainTitle)
+
+            clickToggleAside(mobileMenuBtn)
+            clickToggleAside(ipadMenuBtn)
+            clickToggleAside(closeBtn, false)
+
+            const isMenuVisible = window.getComputedStyle(mobileMenu).display !== 'none'
+            if (isMenuVisible) document.body.style.background = 'none'
+
+            function getEle(...args) {
+                return args.map(arg => document.querySelector(arg))
+            }
+
+            function clickToggleAside(btn, show = true) {
+                btn.addEventListener('click', function () {
+                    if (show) {
+                        aside.style.display = 'block'
+                    } else {
+                        aside.style.display = 'none'
+                    }
+                })
+            }
+        })
+    </script>
+<meta name="generator" content="Hexo 7.1.1"></head>
+
+<body style="background: url(https://cdn.jsdelivr.net/gh/frontendsophie/hexo-theme-autumn@1.0.0/source/img/button-bg.png) #f3f3f3">
+    <div class="container">
+        <header class="header">
+    <nav class="mobile-menu" style="background: url(https://cdn.jsdelivr.net/gh/frontendsophie/hexo-theme-autumn@1.0.0/source/img/button-bg.png) #f3f3f3">
+        <h3 class="invisibile">
+            <a href="/" class="logo">
+                大唐小沙弥的博客
+            </a>
+        </h3>
+        <button class="menu">menu</button>
+    </nav>
+
+    <button class="ipad-menu menu">menu</button>
+
+    <h1 class="title" id="main-title">
+        <a href="/" class="logo">
+            大唐小沙弥的博客
+        </a>
+    </h1>
+    <h2 class="desc">
+        
+    </h2>
+
+    <div class="links">
+        <ul>
+            
+            <li>
+                <a target="_blank" rel="noopener" href="https://github.com/FrontendSophie">
+                    Github
+                </a>
+            </li>
+            
+            <li>
+                <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/frontendsophie/">
+                    LinkedIn
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</header>
+        <main class="main">
+            <article class="post">
+    
+    
+    
+    <h2 class="post-title">
+        20240225-AICT行业每周新闻（AI/ICT Weekly）
+    </h2>
+    <ul class="post-date">
+        <li>
+            2023-02-25
+        </li>
+        <li>
+            Dr Tang
+        </li>
+    </ul>
+    <div class="post-content">
+        <p>本期重点：   </p>
+<p>​        国家发展改革委等部门关于发布《重点用能产品设备能效先进水平、节能水平和准入水平（2024年版）》的通知；财政部：关于《政府采购合作创新采购方式管理暂行办法（征求意见稿）》；OpenAI又推出最新人工智能——文本-视频程序 Sora 让人喜忧交加；赛迪工业和信息化研究院发布《2023中国人工智能大模型企业综合竞争力50强》；关于国家标准《信息安全技术 云计算服务安全能力评估方法》征求意见稿征求意见的通知；2023信创产业领军企业100强排行榜（附榜单）；国家能源局：截至2023年底我国充电基础设施总量达859.6万台，同比增长65%；79次提到供应商，政府采购合作创新采购意见稿哪些内容值得关注？……</p>
+<p>作者：周莉（超聚变数字技术有限公司）</p>
+<span id="more"></span>
+
+<p>文章正文如下：</p>
+<table>
+<thead>
+<tr>
+<th>分类</th>
+<th>标题</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>超聚变</td>
+<td><a target="_blank" rel="noopener" href="https://www.infoobs.com/article/20240205/63513.html">实力领航，超聚变两大案例入选2023中国数字化转型优秀方案集</a></td>
+</tr>
+<tr>
+<td>超聚变</td>
+<td><a target="_blank" rel="noopener" href="https://www.chinaso.com/link?url=FENQL+pv0XEo9GYH2v1b9k1T6Wd287T0174mvlXVQqZXV0+eqwlrYOOsQNPgjYqy">超聚变大模型应用（聚智AI）建设及示范案例</a></td>
+</tr>
+<tr>
+<td>超聚变</td>
+<td><a target="_blank" rel="noopener" href="https://www.chinaso.com/link?url=FENQL+pv0XEo9GYH2v1b9iaMxWhresbsyGN+mnzQUWOYeRUqs5ld3ZBw21QGLkN43cpXgd27uVqknoV2LuvHpA==">企业数智融合之道：超聚变引领AI原生应用新篇章</a></td>
+</tr>
+<tr>
+<td>超聚变</td>
+<td><a target="_blank" rel="noopener" href="https://www.chinaso.com/link?url=FENQL+pv0XEo9GYH2v1b9iaMxWhresbsyGN+mnzQUWOPJ5HMUJ/lpfNrlZ8siNUE3cpXgd27uVqknoV2LuvHpA==">再获殊荣!超聚变服务器操作系统fusionos“全速领跑”</a></td>
+</tr>
+<tr>
+<td>政府通知</td>
+<td><a target="_blank" rel="noopener" href="https://www.miit.gov.cn/jgsj/jns/wjfb/art/2024/art_29b298c772db4c1789e867efcfd7e3aa.html">国家发展改革委等部门关于发布《重点用能产品设备能效先进水平、节能水平和准入水平（2024年版）》的通知</a></td>
+</tr>
+<tr>
+<td>政府通知</td>
+<td><a target="_blank" rel="noopener" href="https://www.gov.cn/zhengce/zhengceku/202402/content_6931055.htm">关于加强行政事业单位数据资产管理的通知</a></td>
+</tr>
+<tr>
+<td>政府通知</td>
+<td><a target="_blank" rel="noopener" href="https://gks.mof.gov.cn/gongzuodongtai/202402/t20240201_3927995.htm">财政部：关于《政府采购合作创新采购方式管理暂行办法（征求意见稿）》</a></td>
+</tr>
+<tr>
+<td>政府通知</td>
+<td><a target="_blank" rel="noopener" href="https://www.gov.cn/zhengce/zhengceku/202402/content_6929643.htm">工业和信息化部关于印发工业控制系统网络安全防护指南的通知</a></td>
+</tr>
+<tr>
+<td>政府通知</td>
+<td><a target="_blank" rel="noopener" href="https://www.gov.cn/zhengce/zhengceku/202401/content_6928370.htm">工业和信息化部等九部门关于印发《原材料工业数字化转型工作方案（2024—2026年）》的通知</a></td>
+</tr>
+<tr>
+<td>政府通知</td>
+<td><a target="_blank" rel="noopener" href="https://www.gov.cn/zhengce/202401/content_6928372.htm">《原材料工业数字化转型工作方案（2024—2026年）》解读</a></td>
+</tr>
+<tr>
+<td>人工智能</td>
+<td><a target="_blank" rel="noopener" href="http://www.news.cn/tech/20240220/0f262a89a95f44daa3b9dff80c465a2b/c.html">OpenAI又推出最新人工智能——文本-视频程序 Sora 让人喜忧交加</a></td>
+</tr>
+<tr>
+<td>人工智能</td>
+<td><a target="_blank" rel="noopener" href="https://www.sohu.com/a/758276348_130887?scm=1102.xchannel:325:100002.0.6.0&spm=smpc.channel_248.block3_308_NDdFbm_1_fd.1.1708410499127vG2hixe_324">本周AI不得了！OpenAI的Sora“模拟世界”、Gemini   1.5“10M上下文”、Mistral的开源新贵同日出现 </a></td>
+</tr>
+<tr>
+<td>人工智能</td>
+<td><a target="_blank" rel="noopener" href="https://finance.sina.cn/2024-02-20/detail-inairpwq7360286.d.html?from=wap">新模型Sora爆火 OpenAI估值或达800亿美元 行业除了震撼还有两大隐患</a></td>
+</tr>
+<tr>
+<td>人工智能</td>
+<td><a target="_blank" rel="noopener" href="https://www.esmchina.com/news/11471.html">日本正在启动GENIAC项目，开发生成式人工智能技术</a></td>
+</tr>
+<tr>
+<td>人工智能</td>
+<td><a target="_blank" rel="noopener" href="https://www.esmchina.com/news/11456.html">欧盟27国批准《人工智能法案》最终文本</a></td>
+</tr>
+<tr>
+<td>人工智能</td>
+<td><a target="_blank" rel="noopener" href="https://www.ithome.com/0/750/394.htm">美国专利商标局：人工智能不能被列为发明人，但人在发明时可使用   AI 工具</a></td>
+</tr>
+<tr>
+<td>人工智能</td>
+<td><a target="_blank" rel="noopener" href="https://www.ithome.com/0/749/304.htm">联想、微软等 8   家全球科技公司签署人工智能伦理相关协议</a></td>
+</tr>
+<tr>
+<td>人工智能</td>
+<td><a target="_blank" rel="noopener" href="https://www.ithome.com/0/749/185.htm">英国政府将斥资超 1 亿英镑启动 AI   研究中心，用于研发、监管工作</a></td>
+</tr>
+<tr>
+<td>人工智能</td>
+<td><a target="_blank" rel="noopener" href="https://www.chinaso.com/link?url=57U1lt0fHqxGIzdChGbV40xqMtCpReJm12mBdDWAfufpMx9mx8/aMIDcyPcxPEIc">AI芯片之争,英伟达正式将华为列为最大竞争对手</a></td>
+</tr>
+<tr>
+<td>人工智能</td>
+<td><a target="_blank" rel="noopener" href="https://www.chinaso.com/link?url=r3z1E2zBN2vRefEfUmaZOBccyoRT4w3rZKuV5TVuTBORg6TzgrDp9O3ZUWLcJHyv">赛迪工业和信息化研究院发布《2023中国人工智能大模型企业综合竞争力50强》</a></td>
+</tr>
+<tr>
+<td>人工智能</td>
+<td><a target="_blank" rel="noopener" href="https://www.chinaso.com/link?url=1PwE6CNqEBgyWuum4LaI9qzCWQt88s0ow0Vkm5C62/0A3seC1zMKFwvRUXVseI0x2zy34o4Hh6DD8WY2XmvWlw==">软银与英伟达联合爱立信、诺基亚开发电信人工智能</a></td>
+</tr>
+<tr>
+<td>人工智能</td>
+<td><a target="_blank" rel="noopener" href="https://www.chinaso.com/link?url=OUqLy7QziT0D1gaZ75e5mLdTRYPJhcOVpBAg6i0nyqtqwBIV1ak2SDbGuP9tqO+w">IBM研究发现： AI语音克隆可劫持合法通话进行诈骗</a></td>
+</tr>
+<tr>
+<td>Gartner</td>
+<td><a target="_blank" rel="noopener" href="https://www.ithome.com/0/750/947.htm?sf=NaBLO/cNdvLZWwP+v8aCxOVDybh8IbKIRgvA9WD5ixmenDDfGyolJmhgYm1jDox/RIWKK2rTZ2Q=">预估 2026 年搜索量降低 25%，生成式 AI 倒逼搜索引擎变革</a></td>
+</tr>
+<tr>
+<td>Gartner</td>
+<td><a target="_blank" rel="noopener" href="https://www.51cto.com/article/781920.html">Gartner：到2026年，30%的企业将因为AI生成的深度伪造而无法起到可靠的隔离作用</a></td>
+</tr>
+<tr>
+<td>IDC</td>
+<td><a target="_blank" rel="noopener" href="https://www.idc.com/getdoc.jsp?containerId=prCHC51842824">5G引领物联网连接增长，IDC发布中国物联网连接量预测</a></td>
+</tr>
+<tr>
+<td>IDC</td>
+<td><a target="_blank" rel="noopener" href="https://www.idc.com/getdoc.jsp?containerId=prCHC51851624">IDC FutureScape：2024年中国电力行业十大预测</a></td>
+</tr>
+<tr>
+<td>IDC</td>
+<td><a target="_blank" rel="noopener" href="https://www.ithome.com/0/749/577.htm">IDC   预估 2027 年 AI PC 在所有 PC 出货量中占比逼近 60%</a></td>
+</tr>
+<tr>
+<td>IDC</td>
+<td><a target="_blank" rel="noopener" href="https://www.chinaso.com/link?url=YfomuwX6JREIZno0bDVCTBepUwSKk8g3S00VMtiq0/lvjik9rhxj3/6ixDzNmIC/iQu3tgh/LSvT4MFz82TgZZEc0wxU37NkrTKCHM4NTF8=">IDC：ICT市场规模超千亿美元 非洲成为数字经济蓝海</a></td>
+</tr>
+<tr>
+<td>IDC</td>
+<td><a target="_blank" rel="noopener" href="https://www.chinaso.com/link?url=RVQJnCWogMX1bP/nXr3DXKC0z8/2VSGaXSnl5QVj5zF85Pl5C/pbLOPSy5Kirs2530Bl/cEfigSpFwx96iOudYKs/uro3LDdlYhLZX9TkT8=">IDC：Sora正式发布前、多模态大模型爆发前夜的十大思考</a></td>
+</tr>
+<tr>
+<td>CPU</td>
+<td><a target="_blank" rel="noopener" href="https://www.chinaso.com/link?url=cwH+FlC1zHDd3KhGwQWKGpTfWlJ9/yu4142wYzTmlDos2fSHQY4oK5USKNjtuhPOQtnipb8HwzV5sep01i3kzw==">Arm与三星宣布共同开发 2 纳米 GAA 优化 Cortex 处理器核心</a></td>
+</tr>
+<tr>
+<td>芯片</td>
+<td><a target="_blank" rel="noopener" href="https://news.sciencenet.cn/htmlnews/2024/2/517606.shtm">软银孙正义欲为AI芯片企业筹资1000亿美元与英伟达竞争</a></td>
+</tr>
+<tr>
+<td>芯片</td>
+<td><a target="_blank" rel="noopener" href="https://www.esmchina.com/news/11485.html">15亿美元！格芯将获得美芯片行业第三笔补贴</a></td>
+</tr>
+<tr>
+<td>芯片</td>
+<td><a target="_blank" rel="noopener" href="https://www.esmchina.com/news/11478.html">退出中国市场后，传Graphcore（英国芯片公司）正考虑出售</a></td>
+</tr>
+<tr>
+<td>芯片</td>
+<td><a target="_blank" rel="noopener" href="https://www.chinaso.com/link?url=p/o5W5IlC0D8CpvL6D6kQKZRVoYPIldgroU1FOwVApPZlP7YYjeC0mxtcXJh3wE7">AI推理速度提升超10倍、性价比超100倍！Groq LPU能否取代NVIDIA GPU？</a></td>
+</tr>
+<tr>
+<td>网络安全</td>
+<td><a target="_blank" rel="noopener" href="https://www.secrss.com/articles/63665">世界网络安全领域2023年度十大进展</a></td>
+</tr>
+<tr>
+<td>网络安全</td>
+<td><a target="_blank" rel="noopener" href="https://backend.chinanews.com/gj/2024/02-15/10163972.shtml">德国网络安全市场预计将首次突破百亿欧元</a></td>
+</tr>
+<tr>
+<td>网络安全</td>
+<td><a target="_blank" rel="noopener" href="https://www.tc260.org.cn/front/bzzqyjDetail.html?id=20240205090456&norm_id=20231220164148&recode_id=54110">关于国家标准《信息安全技术 云计算服务安全能力评估方法》征求意见稿征求意见的通知</a></td>
+</tr>
+<tr>
+<td>信创</td>
+<td><a target="_blank" rel="noopener" href="https://top.askci.com/news/20240109/112255270477057422216756.shtml">2023信创产业领军企业100强排行榜（附榜单）</a></td>
+</tr>
+<tr>
+<td>智能充电</td>
+<td><a target="_blank" rel="noopener" href="https://36kr.com/p/2634028840041607">XCHG   Limited（智能充电有限公司）：创始团队出身特斯拉，带出一个IPO</a></td>
+</tr>
+<tr>
+<td>智能充电</td>
+<td><a target="_blank" rel="noopener" href="https://m.in-en.com/article/html/energy-2330561.shtml">快充站150座！充电桩1790个！北京昌平区发布电动汽车超充快充基础设施专项规划方案</a></td>
+</tr>
+<tr>
+<td>智能充电</td>
+<td><a target="_blank" rel="noopener" href="https://news.cctv.com/2024/01/25/ARTI0VNxPbk0ClZNoAuR72AY240125.shtml">国家能源局：截至2023年底我国充电基础设施总量达859.6万台，同比增长65%</a></td>
+</tr>
+<tr>
+<td>智能充电</td>
+<td><a target="_blank" rel="noopener" href="http://drc.gd.gov.cn/snyj/tzgg/content/post_4357570.html">广东省能源局关于印发2024年电动汽车充电基础设施建设任务的通知</a></td>
+</tr>
+<tr>
+<td>智能充电</td>
+<td><a target="_blank" rel="noopener" href="https://www.gov.cn/lianbo/bumen/202402/content_6933637.htm">今年全国计划新增公路服务区充电桩3000个</a></td>
+</tr>
+<tr>
+<td>智能充电</td>
+<td><a target="_blank" rel="noopener" href="https://www.sohu.com/a/756738177_121833995">中国公用充电基础设施建设现状探究及国际比较研究报告</a></td>
+</tr>
+<tr>
+<td>机器人</td>
+<td><a target="_blank" rel="noopener" href="https://m.chinaagv.com/news/detail/202402/29585.html">国际机器人联合会发布2024 年机器人五大趋势</a></td>
+</tr>
+<tr>
+<td>内存</td>
+<td><a target="_blank" rel="noopener" href="https://www.sohu.com/a/759353669_114822">持久内存（PMEM）即将开启存储新纪元</a></td>
+</tr>
+<tr>
+<td>数据</td>
+<td><a target="_blank" rel="noopener" href="http://www.news.cn/tech/20240220/8113fcb414984e55ac8fb0b83dc6daf2/c.html">多部门联合开展全国数据资源调查</a></td>
+</tr>
+<tr>
+<td>数据中心</td>
+<td><a target="_blank" rel="noopener" href="https://www.chinaso.com/link?url=W4IZgCMRWXUNT+9jd9ieGkgsZKvf7h96ttwK6b3b0oX9mgotOUxRHEbUu2Q1uGqP">总投资63亿元！7544个10KW机架！芜湖首云全球算力调度研发产业园规划方案公示</a></td>
+</tr>
+<tr>
+<td>数据中心</td>
+<td><a target="_blank" rel="noopener" href="http://news.idcquan.com/news/201606.shtml">24家智算，共48个项目新进展——算力中心建设月报（2024年1月）</a></td>
+</tr>
+<tr>
+<td>存储</td>
+<td><a target="_blank" rel="noopener" href="https://www.chinaso.com/link?url=2npDElartQWaAhiwa9BQzkHbOoQbbnoz5mdJWJVJspLJG+bP59BwGMrXkU5jCB4p">美光发布DDR5-6000超频内存，支持Intel XMP 3.0</a></td>
+</tr>
+<tr>
+<td>存储</td>
+<td><a target="_blank" rel="noopener" href="https://www.chinaso.com/link?url=h7VSt62wXkLriwk/8lWrsQwQRkrvbpOu5+Os9H77Za4=">索尼将制造新型激光二极管，与希捷合作开发30TB大容量硬盘</a></td>
+</tr>
+<tr>
+<td>存储</td>
+<td><a target="_blank" rel="noopener" href="https://www.chinaso.com/link?url=koWOJ+fw4SmjW47R9tQkLKVlsVywt2fbluTwbZX8QZtHOzEozegCIrrXoN+LXp+Vxfzbhg/0ydZuHh1EbzEZcrMKnRJd0lKXpeMogukI5eE=">希捷披露放弃 60TB 固态硬盘原因：机械硬盘才是主业</a></td>
+</tr>
+<tr>
+<td>存储</td>
+<td><a target="_blank" rel="noopener" href="https://www.chinaso.com/link?url=JlgLmv9HR6/77DDRctc1G89S26iYVsK1l9CuBMJjoJOfEKT/G5rAZGVKyAaaHs8hLXJodRf0E3xdBp2Z9NKFzM8DXOq1y0jVl/44SP0dt/I=">“超级光盘”诞生 我国在光存储领域获突破性进展</a></td>
+</tr>
+<tr>
+<td>存储</td>
+<td><a target="_blank" rel="noopener" href="https://www.chinaso.com/link?url=RVQJnCWogMX1bP/nXr3DXKC0z8/2VSGaXSnl5QVj5zGz7oDnJL5LGvqPrHw4JURXoFIHgOp8HN2aB7k4N4qhTA==">AI 热潮下企业固态硬盘需求不佳，三星维持 NAND 闪存减产 50%</a></td>
+</tr>
+<tr>
+<td>存储</td>
+<td><a target="_blank" rel="noopener" href="https://www.chinaso.com/link?url=/s9+wa27r4V5PPbtnW6+O6cM0B9HRi/Xa0Vyg7w9Erx9tU2/knUKNmwNSt9XN40w2zy34o4Hh6DD8WY2XmvWlw==">美光推出新DDR5超频记忆体及强调全球最快的Gen5 SSD</a></td>
+</tr>
+<tr>
+<td>AMD</td>
+<td><a target="_blank" rel="noopener" href="https://server.zhiding.cn/server/2024/0209/3155655.shtml">五合一！AMD将五种计算架构合并在一起 推出了Embedded+架构</a></td>
+</tr>
+<tr>
+<td>Apple</td>
+<td><a target="_blank" rel="noopener" href="https://www.ithome.com/0/750/439.htm">苹果正研发 GitHub Copilot   竞品：Xcode AI 可帮开发者转换、调试、生成代码</a></td>
+</tr>
+<tr>
+<td>Apple</td>
+<td><a target="_blank" rel="noopener" href="https://www.chinaso.com/link?url=ilMpnVOaQs6AndTqDMyOILW51q0APx6F1ORWWJXNhBh7k90DC5etbf/ka/d7+c5FQtnipb8HwzV5sep01i3kzw==">苹果将推出imessage的PQ3更新 加强针对量子计算的加密</a></td>
+</tr>
+<tr>
+<td>AWS</td>
+<td><a target="_blank" rel="noopener" href="https://www.chinaso.com/link?url=koWOJ+fw4SmjW47R9tQkLE9hML+2pHsQxQY92wUHFr1fvTCm6xmWTtlm92J/9+zRDz/dloxyJqm6pifJ4iHT4OhQ7OVNammAQaSx7sHqtLuNF8muqhC2jmOV2NsSeHccaopj6ebC7tQOVKQY1FSrtQ==">亚马逊警告员工：工作中勿使用第三方AI工具</a></td>
+</tr>
+<tr>
+<td>Google</td>
+<td><a target="_blank" rel="noopener" href="https://www.ithome.com/0/751/357.htm?sf=NaBLO/cNdvLZWwP+v8aCxOVDybh8IbKIRgvA9WD5ixn9SLqmN5gPN/QObQ3MQbXJ+klxXRQLXmk=">谷歌推出 Gemini for Workspace：每月多花 20 美元解锁 AI 写作、图像生成等功能</a></td>
+</tr>
+<tr>
+<td>HPE</td>
+<td><a target="_blank" rel="noopener" href="https://www.chinaso.com/link?url=/s9+wa27r4V5PPbtnW6+O6cM0B9HRi/Xa0Vyg7w9Erzi+OK1lLgK8YE31OnMo3W32zy34o4Hh6DD8WY2XmvWlw==">HPE推出用于块存储的HPE greenlake第3版</a></td>
+</tr>
+<tr>
+<td>IBM</td>
+<td><a target="_blank" rel="noopener" href="https://www.chinaso.com/link?url=XGOgOmRB2jNm8k/G4YeZpwVkKFQWJkHaTWd5joXBId7lh/L+GgE/e0mxtoUwaOuhRdYC0yva6MRpbggyA0uOepqKEcUAKET6zBknS+S63TAnlLNC7fFpiXw+P4Cw2cBa">IBM人工智能超级计算机 Vela 扩容一倍</a></td>
+</tr>
+<tr>
+<td>IBM</td>
+<td><a target="_blank" rel="noopener" href="https://www.chinaso.com/link?url=XGOgOmRB2jNm8k/G4YeZpwVkKFQWJkHaTWd5joXBId7lh/L+GgE/e0mxtoUwaOuhRdYC0yva6MRpbggyA0uOevF9fXMHle50hPEqECJWBq4nlLNC7fFpiXw+P4Cw2cBa">雄心勃勃的一年：IBM人工智能战略回顾</a></td>
+</tr>
+<tr>
+<td>IBM</td>
+<td><a target="_blank" rel="noopener" href="https://www.chinaso.com/link?url=XGOgOmRB2jNm8k/G4YeZpwVkKFQWJkHaTWd5joXBId7lh/L+GgE/e0mxtoUwaOuhRdYC0yva6MRpbggyA0uOevlAhmj3aU8XcRrf+gi20jMnlLNC7fFpiXw+P4Cw2cBa">IBM为小型企业推出13.5万美元袖珍linuxone设备</a></td>
+</tr>
+<tr>
+<td>Intel</td>
+<td><a target="_blank" rel="noopener" href="https://www.esmchina.com/news/11483.html">消息称英特尔即将获得100亿美元政府补贴</a></td>
+</tr>
+<tr>
+<td>Intel</td>
+<td><a target="_blank" rel="noopener" href="https://www.yicai.com/news/101999741.html">面向AI时代的系统级代工！英特尔宣布全新制程技术路线图</a></td>
+</tr>
+<tr>
+<td>Intel</td>
+<td><a target="_blank" rel="noopener" href="https://www.chinaso.com/link?url=koWOJ+fw4SmjW47R9tQkLKVlsVywt2fbluTwbZX8QZu2tW8mSNVSFzJSKDTiVAoMOiYXFTKdXe6vld5MPpQdOKehMkfqXgWUZxshSZunOctqimPp5sLu1A5UpBjUVKu1">英特尔Bartlett Lake为边缘计算设计 不排除进入消费市场</a></td>
+</tr>
+<tr>
+<td>Intel</td>
+<td><a target="_blank" rel="noopener" href="https://www.chinaso.com/link?url=OUqLy7QziT0D1gaZ75e5mKzEEDnBhPVcpAR7NMfyL1pG7AB1UMI7uju5rJTKW/D6">英特尔：愿为包括竞争对手AMD在内的任何公司代工芯片</a></td>
+</tr>
+<tr>
+<td>Intel</td>
+<td><a target="_blank" rel="noopener" href="https://www.chinaso.com/link?url=RVQJnCWogMX1bP/nXr3DXKC0z8/2VSGaXSnl5QVj5zFEXB/3Cryill0BJV9c9gtLoFIHgOp8HN2aB7k4N4qhTA==">英特尔公布“四年五个制程节点”之后的工艺路线图：新增Intel 14A制程技术</a></td>
+</tr>
+<tr>
+<td>Intel</td>
+<td><a target="_blank" rel="noopener" href="https://www.chinaso.com/link?url=RVQJnCWogMX1bP/nXr3DXKC0z8/2VSGaXSnl5QVj5zGcYios0wabvSnyXKXbm7ipoFIHgOp8HN2aB7k4N4qhTA==">SPEC作废Intel 2600多项官方测试：不允许特殊优化</a></td>
+</tr>
+<tr>
+<td>Nvidia</td>
+<td><a target="_blank" rel="noopener" href="https://server.zhiding.cn/server/2024/0211/3155663.shtml">英伟达成立专为云客户设计定制AI芯片的部门</a></td>
+</tr>
+<tr>
+<td>Nvidia</td>
+<td><a target="_blank" rel="noopener" href="https://finance.sina.cn/2024-02-05/detail-inafyssy3112143.d.html?cre=tianyi&mod=wuc&loc=3&r=0&rfunc=24&tj=cxvertical_wap_wuc&tr=182">英伟达获5亿美元天价大单！印数据中心一口气买下16000块H100&#x2F;GH200</a></td>
+</tr>
+<tr>
+<td>Nvidia</td>
+<td><a target="_blank" rel="noopener" href="https://www.chinaso.com/link?url=XGOgOmRB2jNm8k/G4YeZpwVkKFQWJkHaTWd5joXBId4jKzObHlj9iTpooqMEPqCauP6tNCDaLkML+F7BwanqsEuleT3DVozEsjSduwgY2BAnlLNC7fFpiXw+P4Cw2cBa">英伟达首次公开AI超算规格：搭载4608块H100计算卡，算力世界第九</a></td>
+</tr>
+<tr>
+<td>Tesla</td>
+<td><a target="_blank" rel="noopener" href="https://www.esmchina.com/news/11448.html">特斯拉在美召回近220万辆汽车</a></td>
+</tr>
+<tr>
+<td>华为</td>
+<td><a target="_blank" rel="noopener" href="https://auto.china.com.cn/view/qcq/20240201/726343.shtml">华为布局智能充电，预计电动汽车保有量10年增10倍</a></td>
+</tr>
+<tr>
+<td>华为</td>
+<td><a target="_blank" rel="noopener" href="https://www.chinaso.com/link?url=OUqLy7QziT0D1gaZ75e5mKzEEDnBhPVcpAR7NMfyL1qmO7Ssyj1S4loOX8Yt6kZ7">华为首推全国产消费级SSD</a></td>
+</tr>
+<tr>
+<td>联想</td>
+<td><a target="_blank" rel="noopener" href="https://www.chinaso.com/link?url=OUqLy7QziT0D1gaZ75e5mB6wwch1nH2yWOA+ND3wRNyWEY6MA3G6Fj8felxpyu8kscS+ekZJnxSAgcqKSQzSQd3KV4Hdu7lapJ6Fdi7rx6Q=">联想集团最新季报：智能化转型持续深化全景式AI布局开启新周期</a></td>
+</tr>
+<tr>
+<td>腾讯</td>
+<td><a target="_blank" rel="noopener" href="https://www.chinaso.com/link?url=zR8SyMiw6phb3g2zKuczLcEN0ySAG0En2FywjPActiEnPwmer+mXV4g1OZgo/Q7roFIHgOp8HN2aB7k4N4qhTA==">腾讯公司取得图像处理专利，能够快速地对图像进行处理，提高了用户体验</a></td>
+</tr>
+<tr>
+<td>微软</td>
+<td><a target="_blank" rel="noopener" href="https://www.ithome.com/0/749/187.htm">微软 Copilot for   Microsoft 365 已面向 Windows 桌面用户推出</a></td>
+</tr>
+<tr>
+<td>新华三</td>
+<td><a target="_blank" rel="noopener" href="https://www.h3c.com/cn/d_202402/2053797_473262_0.htm">算存一体，高密首选！新华三存储型服务器全新发布</a></td>
+</tr>
+<tr>
+<td>中兴</td>
+<td><a target="_blank" rel="noopener" href="https://www.chinaso.com/link?url=DPguDHOaIrMavWvPsJSawC+cNCh5+pnoLVtE3i4m2rrnuRHaS0kcHeBBoaAcHQ+3oFIHgOp8HN2aB7k4N4qhTA==">中兴通讯董秘回复：公司车用操作系统产品包括：微内核、虚拟化Hypervisor、safetylinux等</a></td>
+</tr>
+<tr>
+<td>其他</td>
+<td><a target="_blank" rel="noopener" href="https://www.esmchina.com/info/47747.html">人员、流程和技术：2024年通过战略采购构建复原力</a></td>
+</tr>
+<tr>
+<td>其他</td>
+<td><a target="_blank" rel="noopener" href="https://www.secrss.com/articles/63618">79次提到供应商，政府采购合作创新采购意见稿哪些内容值得关注？</a></td>
+</tr>
+<tr>
+<td>其他</td>
+<td><a target="_blank" rel="noopener" href="https://www.chinaso.com/link?url=RVQJnCWogMX1bP/nXr3DXKC0z8/2VSGaXSnl5QVj5zEWwk7blL/sLIUnKtaexzWeoFIHgOp8HN2aB7k4N4qhTA==">国资云+液冷服务器+东数西算+算力租赁+华为昇腾、鲲鹏概念大梳理</a></td>
+</tr>
+<tr>
+<td>其他</td>
+<td><a target="_blank" rel="noopener" href="https://www.chinaso.com/link?url=ThSbTBS12qdG/pNK+TDZULv+NEM7fAb0vyQevEbkxwbvjKrMyoScIy7k81Grt+2dvEhRZEq+Eq6eJTQgZp9OpkeqrEzz1bahosz3FgpMguw=">应战亚马逊，沃尔玛收购Vizio引发广告大变局</a></td>
+</tr>
+</tbody></table>
+<p>  &lt;正文完&gt;</p>
+
+    </div>
+</article>
+        </main>
+        <aside class="aside">
+            <div class="close"></div>
+            <section class="aside-section">
+                
+    <h1>Categories</h1>
+
+    
+
+            </section>
+            <section class="aside-section">
+                
+    <h1>Archives</h1>
+
+    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/">2023</a></li></ul>
+
+
+            </section>
+            <section class="aside-section tag">
+                
+    <h1>Tags</h1>
+
+    
+
+            </section>
+        </aside>
+    </div>
+</body>
+
+</html>
